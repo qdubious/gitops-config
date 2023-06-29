@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: operator-ks-cluster/cie6htcd041ddfdpd3o0-system
+  namespace: wego-system
+spec:
+  interval: 1m0s
+  path: ./.weave-gitops/clusters/operator-ks-cluster/cie6htcd041ddfdpd3o0/system
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: wego-github-gitops-config
+
